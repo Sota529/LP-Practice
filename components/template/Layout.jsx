@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/layout";
 
 const Layout = ({ children }) => {
   return (
-    <Box px="14em" py="4em">
+    <Box px={["2em", "14em"]} py="4em">
       {children}
     </Box>
   );

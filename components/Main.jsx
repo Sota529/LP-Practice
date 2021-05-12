@@ -15,18 +15,14 @@ const Main = (props) => {
         </Text>
       ) : null}
       {props.id === "Contact" ? (
-        <Box
-          display="flex"
-          justifyContent="space-around"
-          mt="0.8em"
-          w="50%"
-          mx="auto"
-        >
+        <Box mt="0.8em" w="60%" mx="auto">
           <Button
-            display="inline-block"
+            display="block"
             variant="solid"
             colorScheme="red"
             shadow="md"
+            mx="auto"
+            mb={["1em", "none"]}
             _focus="none"
             _hover="none"
           >
@@ -38,10 +34,11 @@ const Main = (props) => {
             電話でお問い合わせ
           </Button>
           <Button
-            display="inline-block"
+            display="block"
             variant="solid"
             colorScheme="blue"
             shadow="md"
+            mx="auto"
             _focus="none"
             _hover="none"
           >

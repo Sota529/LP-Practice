@@ -10,17 +10,17 @@ export default function Home() {
     <>
       <Head>
         <title>SOTOKo</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
       <Box bgImage="url('/image/Topimage.jpg')" minH="100vh" bgSize="cover">
         <Box
           textAlign="center"
-          pt="20%"
-          fontSize="4rem"
+          pt={["60%", "20%"]}
+          fontSize={["2.5em", "4rem"]}
           color="#fff"
           fontFamily="Philosopher serif"
-          transition="1s"
         >
           猫好きですか
         </Box>
