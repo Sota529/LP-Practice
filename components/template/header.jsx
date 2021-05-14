@@ -30,7 +30,7 @@ const Header = () => {
               return (
                 <Button
                   key={menu.value}
-                  display="inline"
+                  display="inline-block"
                   id={menu.value}
                   variant="ghost"
                   colorScheme="white"
@@ -40,7 +40,6 @@ const Header = () => {
                   }}
                 >
                   <AnchorLink href={menu.id}>{menu.value}</AnchorLink>
-                  {menu.value}
                 </Button>
               );
             })}
