@@ -14,15 +14,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <Box bgImage="url('/image/Topimage.jpg')" minH="100vh" bgSize="cover">
+      <Box
+        bgImage="url('/image/Topimage.jpg')"
+        h={{ base: "40vh", sm: "50vh", md: "70vh" }}
+        w="100%"
+        bgSize={{ base: "cover", md: "cover" }}
+      >
         <Box
           textAlign="center"
-          pt={["60%", "20%"]}
+          pt={{ base: "2.5em",  md: "3.5em" }}
           fontSize={["2.5em", "4rem"]}
           color="#fff"
           fontFamily="Philosopher serif"
         >
-          猫好きですか
+          によにょにょ
         </Box>
       </Box>
       <Layout>

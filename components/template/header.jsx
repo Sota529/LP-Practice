@@ -12,20 +12,13 @@ const HeaderMenu = [
   { id: "#Contact", value: "お問い合わせ" },
 ];
 const Header = () => {
-  const [isLargerThan700] = useMediaQuery("(min-width: 700px)");
+  const [isLargerThan720] = useMediaQuery("(min-width: 720px)");
+
   return (
-    <Box
-      display="flex"
-      color="whiteAlpha.900"
-      h="20"
-      w="100%"
-      justifyContent="space-between"
-      px={["0", "4em"]}
-      pos="absolute"
-    >
-      {isLargerThan700 ? (
-        <>
-          <Text as="h1" fontSize="3xl" my="auto" flexGrow="1">
+    <Box color="whiteAlpha.900" h="20" w="100%" pos="absolute" mt="1em">
+      {isLargerThan720 ? (
+        <Box px={["2em"]} display="flex" justifyContent="space-between">
+          <Text as="h1" fontSize="3xl" my="auto">
             SO
             <Text fontSize="4xl" display="inline">
               T
@@ -37,28 +30,28 @@ const Header = () => {
               return (
                 <Button
                   key={menu.value}
-                  display="inline-block"
+                  display="inline"
                   id={menu.value}
                   variant="ghost"
                   colorScheme="white"
                   _focus="none"
                   _hover={{
                     textDecoration: "underline",
-                    transition: { textDecoration: "0.3s" },
                   }}
                 >
                   <AnchorLink href={menu.id}>{menu.value}</AnchorLink>
+                  {menu.value}
                 </Button>
               );
             })}
           </Box>
-        </>
+        </Box>
       ) : (
         <>
           <Flex>
-            <HamburgerMenu />
-            <Box ml="auto">
-              <Text as="h1" fontSize="3xl" my="auto" flexGrow="1">
+            <HamburgerMenu menus={HeaderMenu} />
+            <Box>
+              <Text as="h1" fontSize="3xl" my="" flexGrow="1">
                 SO
                 <Text fontSize="4xl" display="inline">
                   T
