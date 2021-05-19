@@ -10,7 +10,13 @@ const Main = (props) => {
         {props.title}
       </Heading>
       {props.main ? (
-        <Text display="block" mx="auto" fontSize="20px" mt="0.8em" pb="3em">
+        <Text
+          display="block"
+          fontSize="20px"
+          m="2em 0 2.5em"
+          pb=""
+          textAlign="center"
+        >
           {props.main}
         </Text>
       ) : null}

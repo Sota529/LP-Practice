@@ -7,9 +7,9 @@ import HamburgerMenu from "../HamburgerMenu";
 
 const HeaderMenu = [
   { id: "#About", value: "SOTOKoについて" },
-  { id: "#Contents", value: "業務内容" },
-  { id: "#Recruit", value: "求人情報" },
-  { id: "#Contact", value: "お問い合わせ" },
+  { id: "#cat", value: "猫を見るだけのアプリ" },
+  // { id: "", value: "求人情報" },
+  // { id: "", value: "お問い合わせ" },
 ];
 const Header = () => {
   const [isLargerThan720] = useMediaQuery("(min-width: 720px)");
