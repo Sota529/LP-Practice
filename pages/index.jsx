@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/layout";
+import { Box, Heading } from "@chakra-ui/layout";
 import Head from "next/head";
 import Footer from "../components/template/footer";
 import Header from "../components/template/header";
@@ -13,22 +13,23 @@ export default function Home() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
       <Box
         bgImage="url('/image/Topimage.jpg')"
         h={{ base: "40vh", sm: "50vh", md: "70vh" }}
         w="100%"
         bgSize={{ base: "cover", md: "cover" }}
-      >
-        <Box
+        >
+        <Header/>
+        <Heading
           textAlign="center"
           pt={{ base: "2.5em",  md: "3.5em" }}
           fontSize={["2.5em", "4rem"]}
           color="#fff"
+          mx="auto"
           fontFamily="Philosopher serif"
         >
           によにょにょ
-        </Box>
+        </Heading>
       </Box>
       <Layout>
         <Main

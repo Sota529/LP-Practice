@@ -1,6 +1,6 @@
 import { Button } from "@chakra-ui/button";
 import { Flex } from "@chakra-ui/layout";
-import { Box, Text } from "@chakra-ui/layout";
+import { Box, Text, Heading } from "@chakra-ui/layout";
 import { useMediaQuery } from "@chakra-ui/media-query";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import HamburgerMenu from "../HamburgerMenu";
@@ -15,53 +15,59 @@ const Header = () => {
   const [isLargerThan720] = useMediaQuery("(min-width: 720px)");
 
   return (
-    <Box color="whiteAlpha.900" h="20" w="100%" pos="absolute" mt="1em">
+    <>
       {isLargerThan720 ? (
-        <Box px={["2em"]} display="flex" justifyContent="space-between">
-          <Text as="h1" fontSize="3xl" my="auto">
-            SO
-            <Text fontSize="4xl" display="inline">
-              T
-            </Text>
-            Ko
-          </Text>
-          <Box my="auto">
-            {HeaderMenu.map((menu) => {
-              return (
-                <Button
-                  key={menu.value}
-                  display="inline-block"
-                  id={menu.value}
-                  variant="ghost"
-                  colorScheme="white"
-                  _focus="none"
-                  _hover={{
-                    textDecoration: "underline",
-                  }}
-                >
-                  <AnchorLink href={menu.id}>{menu.value}</AnchorLink>
-                </Button>
-              );
-            })}
+        <Box pos="absolute">
+          <Box
+            display="flex"
+            justifyContent="space-between"
+            px="20px"
+            my="2em auto 0"
+          >
+            <Heading as="h1" fontSize="3xl">
+              SO
+              <Text fontSize="4xl" display="inline">
+                T
+              </Text>
+              Ko
+            </Heading>
+            <Box display="flex" my="auto">
+              {HeaderMenu.map((menu) => {
+                return (
+                  <Box
+                    key={menu.value}
+                    color="white"
+                    ml="1em"
+                    fontWeight="semibold"
+                    display="block"
+                    _hover={{
+                      textDecoration: "underline",
+                    }}
+                  >
+                    <AnchorLink href={menu.id} id={menu.value}>
+                      {menu.value}
+                    </AnchorLink>
+                  </Box>
+                );
+              })}
+            </Box>
           </Box>
         </Box>
       ) : (
         <>
-          <Flex>
-            <HamburgerMenu menus={HeaderMenu} />
-            <Box>
-              <Text as="h1" fontSize="3xl" my="" flexGrow="1">
-                SO
-                <Text fontSize="4xl" display="inline">
-                  T
-                </Text>
-                Ko
+          <HamburgerMenu menus={HeaderMenu} />
+          <Box>
+            <Heading as="h1" fontSize="3xl" my="" flexGrow="1">
+              SO
+              <Text fontSize="4xl" display="inline">
+                T
               </Text>
-            </Box>
-          </Flex>
+              Ko
+            </Heading>
+          </Box>
         </>
       )}
-    </Box>
+    </>
   );
 };
 export default Header;
