@@ -1,9 +1,11 @@
-import { Box, Heading } from "@chakra-ui/layout";
+import { Box, Heading, Link } from "@chakra-ui/layout";
 import Head from "next/head";
 import Footer from "../components/template/footer";
 import Header from "../components/template/header";
 import Layout from "../components/template/Layout";
 import Main from "../components/Main";
+import GridItem from "../components/atoms/GridItem";
+import { Button } from "@chakra-ui/button";
 
 export default function Home() {
   return (
@@ -18,37 +20,43 @@ export default function Home() {
         h={{ base: "40vh", sm: "50vh", md: "70vh" }}
         w="100%"
         bgSize={{ base: "cover", md: "cover" }}
-        >
-        <Header/>
+      >
+        <Header />
         <Heading
           textAlign="center"
-          pt={{ base: "2.5em",  md: "3.5em" }}
+          pt={{ base: "2.5em", md: "3.0em" }}
           fontSize={["2.5em", "4rem"]}
           color="#fff"
           mx="auto"
           fontFamily="Philosopher serif"
         >
-          によにょにょ
+          We Love Cats
         </Heading>
+        <Button display="block" mx="auto" mt="1em" _focus={"none"}>
+          ネコ好き?
+        </Button>
       </Box>
       <Layout>
         <Main
           id="About"
           title="SOTOKoについて"
-          main="SOTOKoは猫をこよなく愛する私が作成した架空の会社です。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
+          main="SOTOKoは猫をこよなく愛する私が作成した架空の会社です。"
         />
-        <Main
-          id="Contents"
-          title="業務内容"
-          main="猫を眺めることです。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
-        />
-        <Main
-          id="Recruit"
-          title="求人情報"
-          main="将来は猫を飼いたいと思っています。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
-        />
-        <Main id="Contact" title="お問い合わせ" />
+        <GridItem />
       </Layout>
+      <Main
+        id="cat"
+        title="猫を見るだけのアプリ"
+        main={
+          <Link
+            href="https://love-cats.vercel.app/ "
+            isExternal
+            _focus={"none"}
+          >
+            https://love-cats.vercel.app/
+          </Link>
+        }
+      />
       <Footer />
     </>
   );
