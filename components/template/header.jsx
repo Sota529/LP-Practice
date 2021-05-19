@@ -21,8 +21,9 @@ const Header = () => {
           <Box
             display="flex"
             justifyContent="space-between"
-            px="20px"
-            my="2em auto 0"
+            px="5em"
+            my="auto"
+            pt="2em"
           >
             <Heading as="h1" fontSize="3xl">
               SO

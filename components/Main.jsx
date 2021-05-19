@@ -14,43 +14,6 @@ const Main = (props) => {
           {props.main}
         </Text>
       ) : null}
-      {props.id === "Contact" ? (
-        <Box mt="0.8em" w="60%" mx="auto">
-          <Button
-            display="block"
-            variant="solid"
-            colorScheme="red"
-            shadow="md"
-            mx="auto"
-            mb={["1em", "none"]}
-            _focus="none"
-            _hover="none"
-          >
-            <PhoneIcon
-              mr="2px"
-              verticalAlign="text-bottom"
-              display="inline-block"
-            />
-            電話でお問い合わせ
-          </Button>
-          <Button
-            display="block"
-            variant="solid"
-            colorScheme="blue"
-            shadow="md"
-            mx="auto"
-            _focus="none"
-            _hover="none"
-          >
-            <EmailIcon
-              mr="2px"
-              verticalAlign="text-bottom"
-              display="inline-block"
-            />
-            メールでお問い合わせ
-          </Button>
-        </Box>
-      ) : null}
     </div>
   );
 };
