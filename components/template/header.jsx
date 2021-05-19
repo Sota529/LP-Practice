@@ -8,8 +8,8 @@ import HamburgerMenu from "../HamburgerMenu";
 const HeaderMenu = [
   { id: "#About", value: "SOTOKoについて" },
   { id: "#cat", value: "猫を見るだけのアプリ" },
-  // { id: "", value: "求人情報" },
-  // { id: "", value: "お問い合わせ" },
+  { id: "#table", value: "猫の季節" },
+  { id: "#me", value: "私のお話" },
 ];
 const Header = () => {
   const [isLargerThan720] = useMediaQuery("(min-width: 720px)");

@@ -47,7 +47,7 @@ const GridItemList = [
 
 const GridItem = () => {
   return (
-    <Wrap spacing="10px" justify="center">
+    <Wrap spacing="10px" justify="center" mb="5em">
       {GridItemList.map((item) => {
         return (
           <WrapItem key={item.id}>

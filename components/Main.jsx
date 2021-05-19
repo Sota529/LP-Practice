@@ -5,7 +5,7 @@ import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 
 const Main = (props) => {
   return (
-    <div id={props.id}>
+    <Box id={props.id} mb="2em">
       <Heading size="lg" textAlign="center" textDecoration="underline">
         {props.title}
       </Heading>
@@ -20,7 +20,7 @@ const Main = (props) => {
           {props.main}
         </Text>
       ) : null}
-    </div>
+    </Box>
   );
 };
 export default Main;
